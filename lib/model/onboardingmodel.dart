@@ -26,7 +26,7 @@ class OnBoardingModel {
       title: 'Bearish',
     ),
     OnBoardingModel(
-      image: 'assets/image/bearish.png',
+      image: 'assets/image/radio.png',
       promo:
           'You can listen to the Holy Quran Radio through the application for free and easily',
       title: 'Holy Quran Radio',

@@ -19,6 +19,10 @@ abstract class LocalStorageServices {
     return await _preferences.setBool(key, value);
   }
 
+  static Future<bool> setListString(String key, List<String> value) async {
+    return await _preferences.setStringList(key, value);
+  }
+
   static bool? getbool(String key) {
     return _preferences.getBool(key);
   }
@@ -29,5 +33,9 @@ abstract class LocalStorageServices {
 
   static String? getString(String key) {
     return _preferences.getString(key);
+  }
+
+  static List<String>? getListString(String key) {
+    return _preferences.getStringList(key);
   }
 }
