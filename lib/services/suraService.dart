@@ -395,14 +395,13 @@ class SuraService {
     if (isFound) {
       recentSuralist.removeWhere(
           (mostrecent) => mostrecent.suranumber == sura.suranumber);
-
-      recentSuralist.add(sura);
-      List<String> recentSuraIndex = recentSuralist
-          .map((sura) => (sura.suranumber - 1).toString())
-          .toList();
-      LocalStorageServices.setListString(
-          LocalStorageKeys.recentSuraKey, recentSuraIndex);
     }
+
+    recentSuralist.add(sura);
+    List<String> recentSuraIndex =
+        recentSuralist.map((sura) => (sura.suranumber - 1).toString()).toList();
+    LocalStorageServices.setListString(
+        LocalStorageKeys.recentSuraKey, recentSuraIndex);
   }
 
   static void getRecentSuralist() {
